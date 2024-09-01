@@ -1,0 +1,18 @@
+services:
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+      - ./logs:/code/logs  # Mount logs directory
+    ports:
+      - "8000:8000"
+    depends_on:
+      - cerbos
+
+  cerbos:
+    image: ghcr.io/cerbos/cerbos:latest
+    ports:
+      - "3592:3592"
+    volumes:
+      - ./policies:/policies  # Mounts the policies directory

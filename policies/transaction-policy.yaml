@@ -1,0 +1,9 @@
+apiVersion: "api.cerbos.dev/v1"
+kind: "Policy"
+policies:
+  - resource: "transaction"
+    actions:
+      - name: "get_details"
+        roles: ["admin", "editor"]
+      - name: "save_details"
+        roles: ["admin"]
