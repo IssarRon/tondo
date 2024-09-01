@@ -1,1 +1,310 @@
 Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /
+"GET / HTTP/1.1" 404 2162
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2213
+Not Found: /api
+"GET /api HTTP/1.1" 404 2189
+Not Found: /api/
+"GET /api/ HTTP/1.1" 404 2456
+"GET /admin HTTP/1.1" 301 0
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 2214
+"GET /static/admin/css/login.css HTTP/1.1" 200 939
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2271
+"GET /static/admin/css/base.css HTTP/1.1" 200 19513
+"GET /static/admin/css/responsive.css HTTP/1.1" 200 18545
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 1360
+"GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+"GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+"GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+Not Found: /get_details
+"GET /get_details HTTP/1.1" 404 2213
+"GET /api/get_details HTTP/1.1" 301 0
+Received get_details request from user user1
+Checking permission for user user1 with roles ['admin', 'editor'] to perform get_details
+Error communicating with Cerbos: HTTPConnectionPool(host='cerbos', port=3592): Max retries exceeded with url: /api/check (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7fbf4b624f20>: Failed to resolve 'cerbos' ([Errno -2] Name or service not known)"))
+Permission denied for user user1 to perform get_details
+Forbidden: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 403 0
+"GET /api/get_details HTTP/1.1" 301 0
+Received get_details request from user user3
+Checking permission for user user3 with roles ['editor', 'viewer'] to perform get_details
+Error communicating with Cerbos: HTTPConnectionPool(host='cerbos', port=3592): Max retries exceeded with url: /api/check (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7fbf4b4f64b0>: Failed to resolve 'cerbos' ([Errno -2] Name or service not known)"))
+Permission denied for user user3 to perform get_details
+Forbidden: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 403 0
+Received get_details request from user user3
+Checking permission for user user3 with roles ['editor', 'viewer'] to perform get_details
+Error communicating with Cerbos: HTTPConnectionPool(host='cerbos', port=3592): Max retries exceeded with url: /api/check (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7fbf4b4f5190>: Failed to resolve 'cerbos' ([Errno -2] Name or service not known)"))
+Permission denied for user user3 to perform get_details
+Forbidden: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 403 0
+Received get_details request from user user2
+Checking permission for user user2 with roles ['viewer'] to perform get_details
+Error communicating with Cerbos: HTTPConnectionPool(host='cerbos', port=3592): Max retries exceeded with url: /api/check (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7fbf4b4f74a0>: Failed to resolve 'cerbos' ([Errno -2] Name or service not known)"))
+Permission denied for user user2 to perform get_details
+Forbidden: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 403 0
+Received get_details request from user user1
+Checking permission for user user1 with roles ['admin', 'editor'] to perform get_details
+Error communicating with Cerbos: HTTPConnectionPool(host='cerbos', port=3592): Max retries exceeded with url: /api/check (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7fbf4b4f5130>: Failed to resolve 'cerbos' ([Errno -2] Name or service not known)"))
+Permission denied for user user1 to perform get_details
+Forbidden: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 403 0
+Watching for file changes with StatReloader
+Received get_details request from user user1
+Checking permission for user user1 with roles ['admin', 'editor'] to perform get_details
+Error communicating with Cerbos: HTTPConnectionPool(host='cerbos', port=3592): Max retries exceeded with url: /api/check (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7fe9aee205c0>: Failed to resolve 'cerbos' ([Errno -2] Name or service not known)"))
+Permission denied for user user1 to perform get_details
+Forbidden: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 403 0
+"GET /api/get_details HTTP/1.1" 301 0
+Received get_details request from user user1
+Checking permission for user user1 with roles ['admin', 'editor'] to perform get_details
+Error communicating with Cerbos: HTTPConnectionPool(host='cerbos', port=3592): Max retries exceeded with url: /api/check (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7fe9af064590>: Failed to resolve 'cerbos' ([Errno -2] Name or service not known)"))
+Permission denied for user user1 to perform get_details
+Forbidden: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 403 0
+Watching for file changes with StatReloader
+"GET /api/get_details HTTP/1.1" 301 0
+Received get_details request from user user1
+Checking permission for user user1 with roles ['admin', 'editor'] to perform get_details
+Error communicating with Cerbos: HTTPConnectionPool(host='cerbos', port=3592): Max retries exceeded with url: /api/check (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f566d5405c0>: Failed to resolve 'cerbos' ([Errno -2] Name or service not known)"))
+Permission denied for user user1 to perform get_details
+Forbidden: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 403 0
+Received get_details request from user user1
+Checking permission for user user1 with roles ['admin', 'editor'] to perform get_details
+Error communicating with Cerbos: HTTPConnectionPool(host='cerbos', port=3592): Max retries exceeded with url: /api/check (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f566d50d160>: Failed to resolve 'cerbos' ([Errno -2] Name or service not known)"))
+Permission denied for user user1 to perform get_details
+Forbidden: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 403 0
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Received get_details request from user user1
+Checking permission for user user1 with roles ['admin', 'editor'] to perform get_details
+Cerbos response: 400, {"code":3,"message":"proto: (line 1:84): unknown field \"action\""}
+Permission denied for user user1 to perform get_details
+Forbidden: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 403 0
+Received get_details request from user user1
+Checking permission for user user1 with roles ['admin', 'editor'] to perform get_details
+Cerbos response: 400, {"code":3,"message":"proto: (line 1:84): unknown field \"action\""}
+Permission denied for user user1 to perform get_details
+Forbidden: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 403 0
+"GET /api/get_details HTTP/1.1" 301 0
+Received get_details request from user user1
+Checking permission for user user1 with roles ['admin', 'editor'] to perform get_details
+Cerbos response: 400, {"code":3,"message":"proto: (line 1:84): unknown field \"action\""}
+Permission denied for user user1 to perform get_details
+Forbidden: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 403 0
+Received get_details request from user user3
+Checking permission for user user3 with roles ['editor', 'viewer'] to perform get_details
+Cerbos response: 400, {"code":3,"message":"proto: (line 1:85): unknown field \"action\""}
+Permission denied for user user3 to perform get_details
+Forbidden: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 403 0
+Received get_details request from user None
+Checking permission for user None with roles [] to perform get_details
+Cerbos response: 400, {"code":3,"message":"proto: (line 1:67): unknown field \"action\""}
+Permission denied for user None to perform get_details
+Internal Server Error: /api/get_details/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/exception.py", line 47, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/core/handlers/base.py", line 204, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/response.py", line 105, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/rest_framework/renderers.py", line 725, in render
+    template = loader.get_template(self.template)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+"GET /api/get_details/ HTTP/1.1" 500 73430
+Not Found: /get_details
+"GET /get_details HTTP/1.1" 404 2213
+Received get_details request from user user3
+Checking permission for user user3 with roles ['editor', 'viewer'] to perform get_details
+Cerbos response: 400, {"code":3,"message":"proto: (line 1:85): unknown field \"action\""}
+Permission denied for user user3 to perform get_details
+Forbidden: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 403 0
+Received get_details request from user user1
+Checking permission for user user1 with roles ['admin', 'editor'] to perform get_details
+Cerbos response: 400, {"code":3,"message":"proto: (line 1:84): unknown field \"action\""}
+Permission denied for user user1 to perform get_details
+Forbidden: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 403 0
+/code/assignment/cerbos_utils.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Received get_details request from user user3
+Checking permission for user user3 with roles ['editor', 'viewer'] to perform get_details
+Cerbos response: 400, {"code":3,"message":"validation error:\n - actions: value is required [required]\n - principal.id: value is required [required]\n - resource.instances: value is required [required]"}
+Permission denied for user user3 to perform get_details
+Forbidden: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 403 0
+Received get_details request from user user3
+Checking permission for user user3 with roles ['editor', 'viewer'] to perform get_details
+Cerbos response: 400, {"code":3,"message":"validation error:\n - actions: value is required [required]\n - principal.id: value is required [required]\n - resource.instances: value is required [required]"}
+Permission denied for user user3 to perform get_details
+Forbidden: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 403 0
+Received get_details request from user user1
+Checking permission for user user1 with roles ['admin', 'editor'] to perform get_details
+Cerbos response: 400, {"code":3,"message":"validation error:\n - actions: value is required [required]\n - principal.id: value is required [required]\n - resource.instances: value is required [required]"}
+Permission denied for user user1 to perform get_details
+Forbidden: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 403 0
+/code/assignment/cerbos_utils.py changed, reloading.
+Watching for file changes with StatReloader
+/code/assignment/cerbos_utils.py changed, reloading.
+Watching for file changes with StatReloader
+Received get_details request from user user1
+Checking permission for user user1 with roles ['admin', 'editor'] to perform get_details
+Cerbos response: 400, {"code":3,"message":"proto: syntax error (line 1:95): unexpected token \"get_details\""}
+Permission denied for user user1 to perform get_details
+Forbidden: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 403 0
+Watching for file changes with StatReloader
+Received get_details request from user user1
+Checking permission for user user1 with roles ['admin', 'editor'] to perform get_details
+Cerbos response: 400, {"code":3,"message":"proto: syntax error (line 1:95): unexpected token \"get_details\""}
+Permission denied for user user1 to perform get_details
+Forbidden: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 403 0
+Received get_details request from user user1
+Checking permission for user user1 with roles ['admin', 'editor'] to perform get_details
+Cerbos response: 400, {"code":3,"message":"proto: syntax error (line 1:95): unexpected token \"get_details\""}
+Permission denied for user user1 to perform get_details
+Forbidden: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 403 0
+/code/assignment/cerbos_utils.py changed, reloading.
+Watching for file changes with StatReloader
+Received get_details request from user user1
+Checking permission for user user1 with roles ['admin', 'editor'] to perform get_details
+Cerbos response: 400, {"code":3,"message":"proto: syntax error (line 1:95): unexpected token \"get_details\""}
+Permission denied for user user1 to perform get_details
+Forbidden: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 403 0
+Watching for file changes with StatReloader
+Received get_details request from user user1
+Checking permission for user user1 with roles ['admin', 'editor'] to perform get_details
+Cerbos response: 400, {"code":3,"message":"proto: syntax error (line 1:95): unexpected token \"get_details\""}
+Permission denied for user user1 to perform get_details
+Forbidden: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 403 0
+/code/assignment/cerbos_utils.py changed, reloading.
+Watching for file changes with StatReloader
+Received get_details request from user user1
+Checking permission for user user1 with roles ['admin', 'editor'] to perform get_details
+Cerbos response: 400, {"code":3,"message":"proto: syntax error (line 1:95): unexpected token \"get_details\""}
+Permission denied for user user1 to perform get_details
+Forbidden: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 403 0
+/code/assignment/cerbos_utils.py changed, reloading.
+Watching for file changes with StatReloader
+Received get_details request from user user1
+Checking permission for user user1 with roles ['admin', 'editor'] to perform get_details
+Cerbos response: 400, {"code":3,"message":"proto: (line 1:84): unknown field \"action\""}
+Permission denied for user user1 to perform get_details
+Forbidden: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 403 0
+/code/assignment/cerbos_utils.py changed, reloading.
+Watching for file changes with StatReloader
+Received get_details request from user user1
+Cerbos response: 400, {"code":3,"message":"proto: (line 1:98): unknown field \"attributes\""}
+Permission denied for user user1 to perform get_details
+Forbidden: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 403 0
+/code/assignment/cerbos_utils.py changed, reloading.
+Watching for file changes with StatReloader
+Received get_details request from user user1
+Cerbos response: 400, {"code":3,"message":"proto: (line 1:62): unknown field \"resources\""}
+Permission denied for user user1 to perform get_details
+Forbidden: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 403 0
+/code/assignment/cerbos_utils.py changed, reloading.
+Watching for file changes with StatReloader
+Received get_details request from user user1
+Checking permission for user user1 with roles ['admin', 'editor'] to perform get_details
+Payload sent to Cerbos: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction'}, 'actions': ['get_details']}
+Cerbos response: 400, {"code":3,"message":"validation error:\n - resource.instances: value is required [required]"}
+Permission denied for user user1 to perform get_details
+Forbidden: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 403 0
+/code/assignment/cerbos_utils.py changed, reloading.
+Watching for file changes with StatReloader
+Received get_details request from user user1
+Checking permission for user user1 with roles ['admin', 'editor'] to perform get_details
+Payload sent to Cerbos: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {'default': {'attr': 'value'}}}, 'actions': ['get_details']}
+Cerbos response: 400, {"code":3,"message":"proto: syntax error (line 1:132): unexpected token \"value\""}
+Permission denied for user user1 to perform get_details
+Forbidden: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 403 0
+/code/assignment/cerbos_utils.py changed, reloading.
+Watching for file changes with StatReloader
+/code/assignment/cerbos_utils.py changed, reloading.
+Watching for file changes with StatReloader
+/code/assignment/cerbos_utils.py changed, reloading.
+Watching for file changes with StatReloader
+Received get_details request from user user1
+Checking permission for user user1 with roles ['admin', 'editor'] to perform get_details
+Payload sent to Cerbos: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction'}, 'actions': ['get_details']}
+Cerbos response: 400, {"code":3,"message":"validation error:\n - resource.instances: value is required [required]"}
+Permission denied for user user1 to perform get_details
+Forbidden: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 403 0
+/code/assignment/cerbos_utils.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Received get_details request from user user1
+Checking permission for user user1 with roles ['admin', 'editor'] to perform get_details
+Payload sent to Cerbos: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction'}, 'actions': ['get_details']}
+Cerbos response: 400, {"code":3,"message":"validation error:\n - resource.instances: value is required [required]"}
+Permission denied for user user1 to perform get_details
+Forbidden: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 403 0
+/code/assignment/cerbos_utils.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Received get_details request from user user1
+Checking permission for user user1 with roles ['admin', 'editor'] to perform get_details
+Payload sent to Cerbos: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {'some-resource-id': {}}}, 'actions': ['get_details']}
+Cerbos response: 200, {"resourceInstances":{"some-resource-id":{"actions":{"get_details":"EFFECT_ALLOW"}}}}
+Permission denied for user user1 to perform get_details
+Forbidden: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 403 0
+/code/assignment/cerbos_utils.py changed, reloading.
+Watching for file changes with StatReloader
+Received get_details request from user user1
+Checking permission for user user1 with roles ['admin', 'editor'] to perform get_details
+Payload sent to Cerbos: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {'some-resource-id': {}}}, 'actions': ['get_details']}
+Cerbos response: 200, {"resourceInstances":{"some-resource-id":{"actions":{"get_details":"EFFECT_ALLOW"}}}}
+Permission granted for user user1 to perform get_details
+"GET /api/get_details/ HTTP/1.1" 200 27
+Received get_details request from user user2
+Checking permission for user user2 with roles ['viewer'] to perform get_details
+Payload sent to Cerbos: {'principal': {'id': 'user2', 'roles': ['viewer']}, 'resource': {'kind': 'transaction', 'instances': {'some-resource-id': {}}}, 'actions': ['get_details']}
+Cerbos response: 200, {"resourceInstances":{"some-resource-id":{"actions":{"get_details":"EFFECT_DENY"}}}}
+Permission denied for user user2 to perform get_details
+Forbidden: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 403 0
+Received get_details request from user user3
+Checking permission for user user3 with roles ['editor', 'viewer'] to perform get_details
+Payload sent to Cerbos: {'principal': {'id': 'user3', 'roles': ['editor', 'viewer']}, 'resource': {'kind': 'transaction', 'instances': {'some-resource-id': {}}}, 'actions': ['get_details']}
+Cerbos response: 200, {"resourceInstances":{"some-resource-id":{"actions":{"get_details":"EFFECT_ALLOW"}}}}
+Permission granted for user user3 to perform get_details
+"GET /api/get_details/ HTTP/1.1" 200 27
