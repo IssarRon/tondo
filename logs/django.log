@@ -308,3 +308,517 @@ Payload sent to Cerbos: {'principal': {'id': 'user3', 'roles': ['editor', 'viewe
 Cerbos response: 200, {"resourceInstances":{"some-resource-id":{"actions":{"get_details":"EFFECT_ALLOW"}}}}
 Permission granted for user user3 to perform get_details
 "GET /api/get_details/ HTTP/1.1" 200 27
+Watching for file changes with StatReloader
+Received save_details request from user user3 with data: {'phone': '0503889380'}
+Checking permission for user user3 with roles ['editor', 'viewer'] to perform save_details
+Payload sent to Cerbos: {'principal': {'id': 'user3', 'roles': ['editor', 'viewer']}, 'resource': {'kind': 'transaction', 'instances': {'some-resource-id': {}}}, 'actions': ['save_details']}
+Cerbos response: 200, {"resourceInstances":{"some-resource-id":{"actions":{"save_details":"EFFECT_DENY"}}}}
+Permission denied for user user3 to perform save_details
+Forbidden: /api/save_details/
+"POST /api/save_details/ HTTP/1.1" 403 0
+Received save_details request from user user2 with data: {'phone': '0503889380'}
+Checking permission for user user2 with roles ['viewer'] to perform save_details
+Payload sent to Cerbos: {'principal': {'id': 'user2', 'roles': ['viewer']}, 'resource': {'kind': 'transaction', 'instances': {'some-resource-id': {}}}, 'actions': ['save_details']}
+Cerbos response: 200, {"resourceInstances":{"some-resource-id":{"actions":{"save_details":"EFFECT_DENY"}}}}
+Permission denied for user user2 to perform save_details
+Forbidden: /api/save_details/
+"POST /api/save_details/ HTTP/1.1" 403 0
+Received save_details request from user user1 with data: {'phone': '0503889380'}
+Checking permission for user user1 with roles ['admin', 'editor'] to perform save_details
+Payload sent to Cerbos: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {'some-resource-id': {}}}, 'actions': ['save_details']}
+Cerbos response: 200, {"resourceInstances":{"some-resource-id":{"actions":{"save_details":"EFFECT_ALLOW"}}}}
+Data from user user1 is invalid: {'transaction_id': [ErrorDetail(string='This field is required.', code='required')], 'amount': [ErrorDetail(string='This field is required.', code='required')]}
+Bad Request: /api/save_details/
+"POST /api/save_details/ HTTP/1.1" 400 83
+Method Not Allowed: /api/get_details/
+"POST /api/get_details/ HTTP/1.1" 405 41
+Received get_details request from user user1
+Checking permission for user user1 with roles ['admin', 'editor'] to perform get_details
+Payload sent to Cerbos: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {'some-resource-id': {}}}, 'actions': ['get_details']}
+Cerbos response: 200, {"resourceInstances":{"some-resource-id":{"actions":{"get_details":"EFFECT_ALLOW"}}}}
+Permission granted for user user1 to perform get_details
+"GET /api/get_details/ HTTP/1.1" 200 27
+Received save_details request from user user1 with data: {'phone': '0503889380'}
+Checking permission for user user1 with roles ['admin', 'editor'] to perform save_details
+Payload sent to Cerbos: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {'some-resource-id': {}}}, 'actions': ['save_details']}
+Cerbos response: 200, {"resourceInstances":{"some-resource-id":{"actions":{"save_details":"EFFECT_ALLOW"}}}}
+Data from user user1 is invalid: {'transaction_id': [ErrorDetail(string='This field is required.', code='required')], 'amount': [ErrorDetail(string='This field is required.', code='required')]}
+Bad Request: /api/save_details/
+"POST /api/save_details/ HTTP/1.1" 400 83
+/code/assignment/views.py changed, reloading.
+Watching for file changes with StatReloader
+Received save_details request from user user1 with data: {'phone': '0503889380'}
+Checking permission for user user1 with roles ['admin', 'editor'] to perform save_details
+Payload sent to Cerbos: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {'some-resource-id': {}}}, 'actions': ['save_details']}
+Cerbos response: 200, {"resourceInstances":{"some-resource-id":{"actions":{"save_details":"EFFECT_ALLOW"}}}}
+Data from user user1 is invalid: {'transaction_id': [ErrorDetail(string='This field is required.', code='required')], 'amount': [ErrorDetail(string='This field is required.', code='required')]}
+Bad Request: /api/save_details/
+"POST /api/save_details/ HTTP/1.1" 400 83
+/code/assignment/views.py changed, reloading.
+Watching for file changes with StatReloader
+Received save_details request from user user1 with data: {'phone': '0503889380'}
+Checking permission for user user1 with roles ['admin', 'editor'] to perform save_details
+Payload sent to Cerbos: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {'some-resource-id': {}}}, 'actions': ['save_details']}
+Cerbos response: 200, {"resourceInstances":{"some-resource-id":{"actions":{"save_details":"EFFECT_ALLOW"}}}}
+Data from user user1 is invalid: {'transaction_id': [ErrorDetail(string='This field is required.', code='required')], 'amount': [ErrorDetail(string='This field is required.', code='required')]}
+Bad Request: /api/save_details/
+"POST /api/save_details/ HTTP/1.1" 400 83
+/code/assignment/cerbos_utils.py changed, reloading.
+Watching for file changes with StatReloader
+Received save_details request from user user1 with data: {'phone': '0503889380'}
+Checking permission for user user1 with roles ['admin', 'editor'] to perform save_details
+Payload sent to Cerbos: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {'transaction_id': {}}}, 'actions': ['save_details']}
+Cerbos response: 200, {"resourceInstances":{"transaction_id":{"actions":{"save_details":"EFFECT_ALLOW"}}}}
+Permission denied for user user1 to perform save_details
+Forbidden: /api/save_details/
+"POST /api/save_details/ HTTP/1.1" 403 0
+Received get_details request from user user1
+Checking permission for user user1 with roles ['admin', 'editor'] to perform get_details
+Payload sent to Cerbos: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {'transaction_id': {}}}, 'actions': ['get_details']}
+Cerbos response: 200, {"resourceInstances":{"transaction_id":{"actions":{"get_details":"EFFECT_ALLOW"}}}}
+Permission denied for user user1 to perform get_details
+Forbidden: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 403 0
+/code/assignment/cerbos_utils.py changed, reloading.
+Watching for file changes with StatReloader
+/code/assignment/views.py changed, reloading.
+Watching for file changes with StatReloader
+Received save_details request from user user1 with data: {'phone': '0503889380'}
+Checking permission for user user1 with roles ['admin', 'editor'] to perform save_details
+Payload sent to Cerbos: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {'some-resource-id': {}}}, 'actions': ['save_details']}
+Cerbos response: 200, {"resourceInstances":{"some-resource-id":{"actions":{"save_details":"EFFECT_ALLOW"}}}}
+Data from user user1 is invalid: {'transaction_id': [ErrorDetail(string='This field is required.', code='required')], 'amount': [ErrorDetail(string='This field is required.', code='required')]}
+Bad Request: /api/save_details/
+"POST /api/save_details/ HTTP/1.1" 400 83
+Received save_details request from user user1 with data: {'amount': 60}
+Checking permission for user user1 with roles ['admin', 'editor'] to perform save_details
+Payload sent to Cerbos: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {'some-resource-id': {}}}, 'actions': ['save_details']}
+Cerbos response: 200, {"resourceInstances":{"some-resource-id":{"actions":{"save_details":"EFFECT_ALLOW"}}}}
+Data from user user1 is invalid: {'transaction_id': [ErrorDetail(string='This field is required.', code='required')]}
+Bad Request: /api/save_details/
+"POST /api/save_details/ HTTP/1.1" 400 46
+Received save_details request from user user1 with data: {'amount': 60.0}
+Checking permission for user user1 with roles ['admin', 'editor'] to perform save_details
+Payload sent to Cerbos: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {'some-resource-id': {}}}, 'actions': ['save_details']}
+Cerbos response: 200, {"resourceInstances":{"some-resource-id":{"actions":{"save_details":"EFFECT_ALLOW"}}}}
+Data from user user1 is invalid: {'transaction_id': [ErrorDetail(string='This field is required.', code='required')]}
+Bad Request: /api/save_details/
+"POST /api/save_details/ HTTP/1.1" 400 46
+Received save_details request from user user1 with data: <QueryDict: {'amount': ['60']}>
+Checking permission for user user1 with roles ['admin', 'editor'] to perform save_details
+Payload sent to Cerbos: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {'some-resource-id': {}}}, 'actions': ['save_details']}
+Cerbos response: 200, {"resourceInstances":{"some-resource-id":{"actions":{"save_details":"EFFECT_ALLOW"}}}}
+Data from user user1 is invalid: {'transaction_id': [ErrorDetail(string='This field is required.', code='required')]}
+Bad Request: /api/save_details/
+"POST /api/save_details/ HTTP/1.1" 400 46
+Received save_details request from user user1 with data: {'amount': 'a'}
+Checking permission for user user1 with roles ['admin', 'editor'] to perform save_details
+Payload sent to Cerbos: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {'some-resource-id': {}}}, 'actions': ['save_details']}
+Cerbos response: 200, {"resourceInstances":{"some-resource-id":{"actions":{"save_details":"EFFECT_ALLOW"}}}}
+Data from user user1 is invalid: {'transaction_id': [ErrorDetail(string='This field is required.', code='required')], 'amount': [ErrorDetail(string='A valid number is required.', code='invalid')]}
+Bad Request: /api/save_details/
+"POST /api/save_details/ HTTP/1.1" 400 87
+Received save_details request from user user1 with data: {'amount': 60.0}
+Checking permission for user user1 with roles ['admin', 'editor'] to perform save_details
+Payload sent to Cerbos: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {'some-resource-id': {}}}, 'actions': ['save_details']}
+Cerbos response: 200, {"resourceInstances":{"some-resource-id":{"actions":{"save_details":"EFFECT_ALLOW"}}}}
+Data from user user1 is invalid: {'transaction_id': [ErrorDetail(string='This field is required.', code='required')]}
+Bad Request: /api/save_details/
+"POST /api/save_details/ HTTP/1.1" 400 46
+Received save_details request from user user1 with data: {'amount': '60.0'}
+Checking permission for user user1 with roles ['admin', 'editor'] to perform save_details
+Payload sent to Cerbos: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {'some-resource-id': {}}}, 'actions': ['save_details']}
+Cerbos response: 200, {"resourceInstances":{"some-resource-id":{"actions":{"save_details":"EFFECT_ALLOW"}}}}
+Data from user user1 is invalid: {'transaction_id': [ErrorDetail(string='This field is required.', code='required')]}
+Bad Request: /api/save_details/
+"POST /api/save_details/ HTTP/1.1" 400 46
+Received save_details request from user user1 with data: {'amount': 60.0, 'transaction_id': 1}
+Checking permission for user user1 with roles ['admin', 'editor'] to perform save_details
+Payload sent to Cerbos: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {'some-resource-id': {}}}, 'actions': ['save_details']}
+Cerbos response: 200, {"resourceInstances":{"some-resource-id":{"actions":{"save_details":"EFFECT_ALLOW"}}}}
+Data from user user1 is valid. Saving details.
+"POST /api/save_details/ HTTP/1.1" 200 36
+Received get_details request from user user1
+Checking permission for user user1 with roles ['admin', 'editor'] to perform get_details
+Payload sent to Cerbos: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {'some-resource-id': {}}}, 'actions': ['get_details']}
+Cerbos response: 200, {"resourceInstances":{"some-resource-id":{"actions":{"get_details":"EFFECT_ALLOW"}}}}
+Permission granted for user user1 to perform get_details
+"GET /api/get_details/ HTTP/1.1" 200 27
+Received get_details request from user user2
+Checking permission for user user2 with roles ['viewer'] to perform get_details
+Payload sent to Cerbos: {'principal': {'id': 'user2', 'roles': ['viewer']}, 'resource': {'kind': 'transaction', 'instances': {'some-resource-id': {}}}, 'actions': ['get_details']}
+Cerbos response: 200, {"resourceInstances":{"some-resource-id":{"actions":{"get_details":"EFFECT_DENY"}}}}
+Permission denied for user user2 to perform get_details
+Forbidden: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 403 0
+Received get_details request from user user3
+Checking permission for user user3 with roles ['editor', 'viewer'] to perform get_details
+Payload sent to Cerbos: {'principal': {'id': 'user3', 'roles': ['editor', 'viewer']}, 'resource': {'kind': 'transaction', 'instances': {'some-resource-id': {}}}, 'actions': ['get_details']}
+Cerbos response: 200, {"resourceInstances":{"some-resource-id":{"actions":{"get_details":"EFFECT_ALLOW"}}}}
+Permission granted for user user3 to perform get_details
+"GET /api/get_details/ HTTP/1.1" 200 27
+Method Not Allowed: /api/save_details/
+"GET /api/save_details/ HTTP/1.1" 405 40
+Received save_details request from user user3 with data: {'amount': 60.0, 'transaction_id': 1}
+Checking permission for user user3 with roles ['editor', 'viewer'] to perform save_details
+Payload sent to Cerbos: {'principal': {'id': 'user3', 'roles': ['editor', 'viewer']}, 'resource': {'kind': 'transaction', 'instances': {'some-resource-id': {}}}, 'actions': ['save_details']}
+Cerbos response: 200, {"resourceInstances":{"some-resource-id":{"actions":{"save_details":"EFFECT_DENY"}}}}
+Permission denied for user user3 to perform save_details
+Forbidden: /api/save_details/
+"POST /api/save_details/ HTTP/1.1" 403 0
+Received save_details request from user user1 with data: {'amount': 60.0, 'transaction_id': 1}
+Checking permission for user user1 with roles ['admin', 'editor'] to perform save_details
+Payload sent to Cerbos: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {'some-resource-id': {}}}, 'actions': ['save_details']}
+Cerbos response: 200, {"resourceInstances":{"some-resource-id":{"actions":{"save_details":"EFFECT_ALLOW"}}}}
+Data from user user1 is valid. Saving details.
+"POST /api/save_details/ HTTP/1.1" 200 36
+/code/assignment/cerbos_utils.py changed, reloading.
+Watching for file changes with StatReloader
+/code/assignment/views.py changed, reloading.
+Watching for file changes with StatReloader
+Received save_details request from user user1 with data: {'amount': 60.0, 'transaction_id': 1}
+Retrieved roles for user user1: ['admin', 'editor']
+Constructed Cerbos payload: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {1: {}}}, 'actions': ['save_details']}
+Cerbos API response: 200, {"resourceInstances":{"1":{"actions":{"save_details":"EFFECT_ALLOW"}}}}
+Permission check result for user user1, action save_details on resource 1: False
+Permission denied for user user1 to perform save_details on transaction 1
+Forbidden: /api/save_details/
+"POST /api/save_details/ HTTP/1.1" 403 0
+/code/assignment/cerbos_utils.py changed, reloading.
+Watching for file changes with StatReloader
+Received save_details request from user user1 with data: {'amount': 60.0, 'transaction_id': 1}
+Retrieved roles for user user1: ['admin', 'editor']
+Constructed Cerbos payload: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {'1': {}}}, 'actions': ['save_details']}
+Cerbos API response: 200, {"resourceInstances":{"1":{"actions":{"save_details":"EFFECT_ALLOW"}}}}
+Permission check result for user user1, action save_details on resource 1: False
+Permission denied for user user1 to perform save_details on transaction 1
+Forbidden: /api/save_details/
+"POST /api/save_details/ HTTP/1.1" 403 0
+Received save_details request from user user1 with data: {'amount': 60.0, 'transaction_id': '1'}
+Retrieved roles for user user1: ['admin', 'editor']
+Constructed Cerbos payload: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {'1': {}}}, 'actions': ['save_details']}
+Cerbos API response: 200, {"resourceInstances":{"1":{"actions":{"save_details":"EFFECT_ALLOW"}}}}
+Permission check result for user user1, action save_details on resource 1: True
+Data from user user1 is valid. Saving details for transaction 1.
+"POST /api/save_details/ HTTP/1.1" 200 36
+Received save_details request from user user1 with data: {'amount': 60.0, 'transaction_id': 1}
+Retrieved roles for user user1: ['admin', 'editor']
+Constructed Cerbos payload: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {'1': {}}}, 'actions': ['save_details']}
+Cerbos API response: 200, {"resourceInstances":{"1":{"actions":{"save_details":"EFFECT_ALLOW"}}}}
+Permission check result for user user1, action save_details on resource 1: False
+Permission denied for user user1 to perform save_details on transaction 1
+Forbidden: /api/save_details/
+"POST /api/save_details/ HTTP/1.1" 403 0
+/code/assignment/cerbos_utils.py changed, reloading.
+Watching for file changes with StatReloader
+Received save_details request from user user1 with data: {'amount': 60.0, 'transaction_id': 1}
+Retrieved roles for user user1: ['admin', 'editor']
+Constructed Cerbos payload: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {1: {}}}, 'actions': ['save_details']}
+Cerbos API response: 200, {"resourceInstances":{"1":{"actions":{"save_details":"EFFECT_ALLOW"}}}}
+Permission check result for user user1, action save_details on resource 1: False
+Permission denied for user user1 to perform save_details on transaction 1
+Forbidden: /api/save_details/
+"POST /api/save_details/ HTTP/1.1" 403 0
+Received save_details request from user user1 with data: {'amount': 60.0, 'transaction_id': '1'}
+Retrieved roles for user user1: ['admin', 'editor']
+Constructed Cerbos payload: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {'1': {}}}, 'actions': ['save_details']}
+Cerbos API response: 200, {"resourceInstances":{"1":{"actions":{"save_details":"EFFECT_ALLOW"}}}}
+Permission check result for user user1, action save_details on resource 1: True
+Data from user user1 is valid. Saving details for transaction 1.
+"POST /api/save_details/ HTTP/1.1" 200 36
+/code/assignment/cerbos_utils.py changed, reloading.
+Watching for file changes with StatReloader
+/code/assignment/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Received save_details request from user user1 with data: {'amount': 60.0, 'transaction_id': '1'}
+Retrieved roles for user user1: ['admin', 'editor']
+Constructed Cerbos payload: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {'1': {}}}, 'actions': ['save_details']}
+Cerbos API response: 200, {"resourceInstances":{"1":{"actions":{"save_details":"EFFECT_ALLOW"}}}}
+Permission check result for user user1, action save_details on resource 1: True
+Data from user user1 is valid. Saving details for transaction 1.
+"POST /api/save_details/ HTTP/1.1" 200 36
+Received save_details request from user user1 with data: {'amount': 60.0, 'transaction_id': 1}
+Retrieved roles for user user1: ['admin', 'editor']
+Constructed Cerbos payload: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {1: {}}}, 'actions': ['save_details']}
+Cerbos API response: 200, {"resourceInstances":{"1":{"actions":{"save_details":"EFFECT_ALLOW"}}}}
+Permission check result for user user1, action save_details on resource 1: False
+Permission denied for user user1 to perform save_details on transaction 1
+Forbidden: /api/save_details/
+"POST /api/save_details/ HTTP/1.1" 403 0
+/code/assignment/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Received save_details request from user user1 with data: {'amount': 60.0, 'transaction_id': '1'}
+Retrieved roles for user user1: ['admin', 'editor']
+Constructed Cerbos payload: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {'1': {}}}, 'actions': ['save_details']}
+Cerbos API response: 200, {"resourceInstances":{"1":{"actions":{"save_details":"EFFECT_ALLOW"}}}}
+Permission check result for user user1, action save_details on resource 1: True
+Data from user user1 is valid. Saving details for transaction 1.
+"POST /api/save_details/ HTTP/1.1" 200 36
+Received save_details request from user user1 with data: {'amount': 60.0, 'transaction_id': 1}
+Retrieved roles for user user1: ['admin', 'editor']
+Constructed Cerbos payload: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {1: {}}}, 'actions': ['save_details']}
+Cerbos API response: 200, {"resourceInstances":{"1":{"actions":{"save_details":"EFFECT_ALLOW"}}}}
+Permission check result for user user1, action save_details on resource 1: False
+Permission denied for user user1 to perform save_details on transaction 1
+Forbidden: /api/save_details/
+"POST /api/save_details/ HTTP/1.1" 403 0
+Received save_details request from user user1 with data: {'amount': 60.0, 'transaction_id': 1.0}
+Retrieved roles for user user1: ['admin', 'editor']
+Constructed Cerbos payload: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {1.0: {}}}, 'actions': ['save_details']}
+Cerbos API response: 200, {"resourceInstances":{"1.0":{"actions":{"save_details":"EFFECT_ALLOW"}}}}
+Permission check result for user user1, action save_details on resource 1.0: False
+Permission denied for user user1 to perform save_details on transaction 1.0
+Forbidden: /api/save_details/
+"POST /api/save_details/ HTTP/1.1" 403 0
+Received save_details request from user user1 with data: {'amount': 60.0, 'transaction_id': '1'}
+Retrieved roles for user user1: ['admin', 'editor']
+Constructed Cerbos payload: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {'1': {}}}, 'actions': ['save_details']}
+Cerbos API response: 200, {"resourceInstances":{"1":{"actions":{"save_details":"EFFECT_ALLOW"}}}}
+Permission check result for user user1, action save_details on resource 1: True
+Data from user user1 is valid. Saving details for transaction 1.
+"POST /api/save_details/ HTTP/1.1" 200 36
+Received save_details request from user user1 with data: {'amount': 60, 'transaction_id': '1'}
+Retrieved roles for user user1: ['admin', 'editor']
+Constructed Cerbos payload: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {'1': {}}}, 'actions': ['save_details']}
+Cerbos API response: 200, {"resourceInstances":{"1":{"actions":{"save_details":"EFFECT_ALLOW"}}}}
+Permission check result for user user1, action save_details on resource 1: True
+Data from user user1 is valid. Saving details for transaction 1.
+"POST /api/save_details/ HTTP/1.1" 200 36
+Received save_details request from user user1 with data: {'amount': 60, 'transaction_id': 1}
+Retrieved roles for user user1: ['admin', 'editor']
+Constructed Cerbos payload: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {1: {}}}, 'actions': ['save_details']}
+Cerbos API response: 200, {"resourceInstances":{"1":{"actions":{"save_details":"EFFECT_ALLOW"}}}}
+Permission check result for user user1, action save_details on resource 1: False
+Permission denied for user user1 to perform save_details on transaction 1
+Forbidden: /api/save_details/
+"POST /api/save_details/ HTTP/1.1" 403 0
+/code/assignment/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/code/assignment/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Received save_details request from user user1 with data: {'amount': 60, 'transaction_id': 1}
+Retrieved roles for user user1: ['admin', 'editor']
+Constructed Cerbos payload: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {1: {}}}, 'actions': ['save_details']}
+Cerbos API response: 200, {"resourceInstances":{"1":{"actions":{"save_details":"EFFECT_ALLOW"}}}}
+Permission check result for user user1, action save_details on resource 1: False
+Permission denied for user user1 to perform save_details on transaction 1
+Forbidden: /api/save_details/
+"POST /api/save_details/ HTTP/1.1" 403 0
+Received save_details request from user user1 with data: {'amount': 60, 'transaction_id': 1}
+Retrieved roles for user user1: ['admin', 'editor']
+Constructed Cerbos payload: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {1: {}}}, 'actions': ['save_details']}
+Cerbos API response: 200, {"resourceInstances":{"1":{"actions":{"save_details":"EFFECT_ALLOW"}}}}
+Permission check result for user user1, action save_details on resource 1: False
+Permission denied for user user1 to perform save_details on transaction 1
+Forbidden: /api/save_details/
+"POST /api/save_details/ HTTP/1.1" 403 0
+/code/assignment/cerbos_utils.py changed, reloading.
+Watching for file changes with StatReloader
+Received save_details request from user user1 with data: {'amount': 60, 'transaction_id': 1}
+Retrieved roles for user user1: ['admin', 'editor']
+Constructed Cerbos payload: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {'1': {}}}, 'actions': ['save_details']}
+Cerbos API response: 200, {"resourceInstances":{"1":{"actions":{"save_details":"EFFECT_ALLOW"}}}}
+Permission check result for user user1, action save_details on resource 1: False
+Permission denied for user user1 to perform save_details on transaction 1
+Forbidden: /api/save_details/
+"POST /api/save_details/ HTTP/1.1" 403 0
+Received save_details request from user user1 with data: {'amount': 60, 'transaction_id': 1}
+Retrieved roles for user user1: ['admin', 'editor']
+Constructed Cerbos payload: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {'1': {}}}, 'actions': ['save_details']}
+Cerbos API response: 200, {"resourceInstances":{"1":{"actions":{"save_details":"EFFECT_ALLOW"}}}}
+Permission check result for user user1, action save_details on resource 1: False
+Permission denied for user user1 to perform save_details on transaction 1
+Forbidden: /api/save_details/
+"POST /api/save_details/ HTTP/1.1" 403 0
+Received save_details request from user user1 with data: {'amount': 60, 'transaction_id': 1}
+Retrieved roles for user user1: ['admin', 'editor']
+Constructed Cerbos payload: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {'1': {}}}, 'actions': ['save_details']}
+Cerbos API response: 200, {"resourceInstances":{"1":{"actions":{"save_details":"EFFECT_ALLOW"}}}}
+Permission check result for user user1, action save_details on resource 1: False
+Permission denied for user user1 to perform save_details on transaction 1
+Forbidden: /api/save_details/
+"POST /api/save_details/ HTTP/1.1" 403 0
+/code/assignment/cerbos_utils.py changed, reloading.
+Watching for file changes with StatReloader
+Received save_details request from user user1 with data: {'amount': 60, 'transaction_id': 1}
+Retrieved roles for user user1: ['admin', 'editor']
+Constructed Cerbos payload: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {'1': {}}}, 'actions': ['save_details']}
+Cerbos API response: 200, {"resourceInstances":{"1":{"actions":{"save_details":"EFFECT_ALLOW"}}}}
+Permission check result for user user1, action save_details on resource 1: True
+Data from user user1 is valid. Saving details for transaction 1.
+"POST /api/save_details/ HTTP/1.1" 200 34
+/code/assignment/cerbos_utils.py changed, reloading.
+Watching for file changes with StatReloader
+Received save_details request from user user1 with data: {'amount': 60, 'transaction_id': 1}
+Retrieved roles for user user1: ['admin', 'editor']
+Constructed Cerbos payload: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {1: {}}}, 'actions': ['save_details']}
+Cerbos API response: 200, {"resourceInstances":{"1":{"actions":{"save_details":"EFFECT_ALLOW"}}}}
+Permission check result for user user1, action save_details on resource 1: True
+Data from user user1 is valid. Saving details for transaction 1.
+"POST /api/save_details/ HTTP/1.1" 200 34
+Method Not Allowed: /api/save_details/
+"GET /api/save_details/ HTTP/1.1" 405 40
+Received get_details request from user user1 for transaction None
+Transaction ID not provided in request
+Bad Request: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 400 38
+Received get_details request from user user1 for transaction None
+Transaction ID not provided in request
+Bad Request: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 400 38
+Received get_details request from user user1 for transaction None
+Transaction ID not provided in request
+Bad Request: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 400 38
+Received get_details request from user user1 for transaction None
+Transaction ID not provided in request
+Bad Request: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 400 38
+Received get_details request from user user1 for transaction None
+Transaction ID not provided in request
+Bad Request: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 400 38
+Received get_details request from user user2 for transaction None
+Transaction ID not provided in request
+Bad Request: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 400 38
+Received get_details request from user user1 for transaction None
+Transaction ID not provided in request
+Bad Request: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 400 38
+Received get_details request from user user1 for transaction None
+Transaction ID not provided in request
+Bad Request: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 400 38
+Received get_details request from user user1 for transaction None
+Transaction ID not provided in request
+Bad Request: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 400 38
+Received get_details request from user user1 for transaction None
+Transaction ID not provided in request
+Bad Request: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 400 38
+Received get_details request from user user1 for transaction None
+Transaction ID not provided in request
+Bad Request: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 400 38
+/code/assignment/views.py changed, reloading.
+Watching for file changes with StatReloader
+Received get_details request from user user1 for transaction None
+Transaction ID not provided in request
+Bad Request: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 400 38
+Received get_details request from user user1 for transaction None
+Transaction ID not provided in request
+Bad Request: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 400 38
+/code/assignment/views.py changed, reloading.
+Watching for file changes with StatReloader
+Received get_details request from user user1 for transaction None
+Transaction ID not provided in request
+Bad Request: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 400 38
+/code/assignment/views.py changed, reloading.
+Watching for file changes with StatReloader
+Received get_details request from user user1 for transaction None
+Transaction ID not provided in request
+Bad Request: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 400 38
+/code/assignment/views.py changed, reloading.
+Watching for file changes with StatReloader
+Received get_details request from user user1 for transaction None
+Transaction ID not provided in request
+Bad Request: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 400 38
+Received get_details request from user user1 for transaction None
+Transaction ID not provided in request
+Bad Request: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 400 38
+/code/assignment/views.py changed, reloading.
+Watching for file changes with StatReloader
+Received get_details request from user user1 for transaction 1
+Retrieved roles for user user1: ['admin', 'editor']
+Constructed Cerbos payload: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {1: {}}}, 'actions': ['get_details']}
+Cerbos API response: 200, {"resourceInstances":{"1":{"actions":{"get_details":"EFFECT_ALLOW"}}}}
+Permission check result for user user1, action get_details on resource 1: True
+Permission granted for user user1 to perform get_details on transaction 1
+"GET /api/get_details/ HTTP/1.1" 200 45
+/code/assignment/views.py changed, reloading.
+Watching for file changes with StatReloader
+/code/assignment/views.py changed, reloading.
+Watching for file changes with StatReloader
+/code/assignment/views.py changed, reloading.
+Watching for file changes with StatReloader
+Received get_details request from user user1 for transaction 1
+Retrieved roles for user user1: ['admin', 'editor']
+Constructed Cerbos payload: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {1: {}}}, 'actions': ['get_details']}
+Cerbos API response: 200, {"resourceInstances":{"1":{"actions":{"get_details":"EFFECT_ALLOW"}}}}
+Permission check result for user user1, action get_details on resource 1: True
+Permission granted for user user1 to perform get_details on transaction 1
+"GET /api/get_details/ HTTP/1.1" 200 45
+Received get_details request from user user1 for transaction 2
+Retrieved roles for user user1: ['admin', 'editor']
+Constructed Cerbos payload: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {2: {}}}, 'actions': ['get_details']}
+Cerbos API response: 200, {"resourceInstances":{"2":{"actions":{"get_details":"EFFECT_ALLOW"}}}}
+Permission check result for user user1, action get_details on resource 2: True
+Permission granted for user user1 to perform get_details on transaction 2
+"GET /api/get_details/ HTTP/1.1" 200 45
+Received get_details request from user user1 for transaction 1
+Retrieved roles for user user1: ['admin', 'editor']
+Constructed Cerbos payload: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {1: {}}}, 'actions': ['get_details']}
+Cerbos API response: 200, {"resourceInstances":{"1":{"actions":{"get_details":"EFFECT_ALLOW"}}}}
+Permission check result for user user1, action get_details on resource 1: True
+Permission granted for user user1 to perform get_details on transaction 1
+"GET /api/get_details/ HTTP/1.1" 200 45
+Received get_details request from user user2 for transaction 1
+Retrieved roles for user user2: ['viewer']
+Constructed Cerbos payload: {'principal': {'id': 'user2', 'roles': ['viewer']}, 'resource': {'kind': 'transaction', 'instances': {1: {}}}, 'actions': ['get_details']}
+Cerbos API response: 200, {"resourceInstances":{"1":{"actions":{"get_details":"EFFECT_DENY"}}}}
+Permission check result for user user2, action get_details on resource 1: False
+Permission denied for user user2 to perform get_details on transaction 1
+Forbidden: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 403 0
+Received get_details request from user user3 for transaction 1
+Retrieved roles for user user3: ['editor', 'viewer']
+Constructed Cerbos payload: {'principal': {'id': 'user3', 'roles': ['editor', 'viewer']}, 'resource': {'kind': 'transaction', 'instances': {1: {}}}, 'actions': ['get_details']}
+Cerbos API response: 200, {"resourceInstances":{"1":{"actions":{"get_details":"EFFECT_ALLOW"}}}}
+Permission check result for user user3, action get_details on resource 1: True
+Permission granted for user user3 to perform get_details on transaction 1
+"GET /api/get_details/ HTTP/1.1" 200 45
+Received get_details request from user user1 for transaction 1
+Retrieved roles for user user1: ['admin', 'editor']
+Constructed Cerbos payload: {'principal': {'id': 'user1', 'roles': ['admin', 'editor']}, 'resource': {'kind': 'transaction', 'instances': {1: {}}}, 'actions': ['get_details']}
+Cerbos API response: 200, {"resourceInstances":{"1":{"actions":{"get_details":"EFFECT_ALLOW"}}}}
+Permission check result for user user1, action get_details on resource 1: True
+Permission granted for user user1 to perform get_details on transaction 1
+"GET /api/get_details/ HTTP/1.1" 200 45
+/code/assignment/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/code/assignment/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/code/assignment/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/code/assignment/views.py changed, reloading.
+Watching for file changes with StatReloader
+/code/assignment/cerbos_utils.py changed, reloading.
+Watching for file changes with StatReloader
+/code/assignment/cerbos_utils.py changed, reloading.
+Watching for file changes with StatReloader
+/code/assignment/views.py changed, reloading.
+Watching for file changes with StatReloader
+/code/assignment/utils.py changed, reloading.
+Watching for file changes with StatReloader
+/code/assignment/views.py changed, reloading.
+Watching for file changes with StatReloader
+Invalid data received: {'transaction_id': [ErrorDetail(string='This field is required.', code='required')]}
+Bad Request: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 400 46
+Invalid data received: {'transaction_id': [ErrorDetail(string='This field is required.', code='required')]}
+Bad Request: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 400 46
+Invalid data received: {'transaction_id': [ErrorDetail(string='This field is required.', code='required')]}
+Bad Request: /api/get_details/
+"GET /api/get_details/ HTTP/1.1" 400 46
+/code/assignment/utils.py changed, reloading.
+Watching for file changes with StatReloader
