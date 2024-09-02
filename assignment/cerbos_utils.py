@@ -2,17 +2,19 @@ import logging
 import requests
 from .consts import user_roles_map
 
-# Set up the logger for this module
+# Initialize logger for this module
 logger = logging.getLogger(__name__)
 
+# URL to Cerbos API for permission checks
 CERBOS_URL = "http://cerbos:3592/api/check"
 
+#retrieve roles for a given user ID.
 def get_user_roles(userid):
-    """Retrieve roles for a given user ID."""
     roles = user_roles_map.get(userid, [])
     logger.info(f"Retrieved roles for user {userid}: {roles}")
     return roles
 
+#build the payload to send to the Cerbos API for permission checking.
 def build_cerbos_payload(userid, roles, action, resource_id):
     payload = {
         "principal": {
@@ -20,9 +22,9 @@ def build_cerbos_payload(userid, roles, action, resource_id):
             "roles": roles
         },
         "resource": {
-            "kind": "transaction",
+            "kind": "transaction", 
             "instances": {
-                resource_id: {} 
+                resource_id: {}
             }
         },
         "actions": [action]
@@ -30,6 +32,7 @@ def build_cerbos_payload(userid, roles, action, resource_id):
     logger.debug(f"Constructed Cerbos payload: {payload}")
     return payload
 
+#send the permission check payload to the Cerbos API
 def call_cerbos_api(payload):
     try:
         response = requests.post(CERBOS_URL, json=payload)
@@ -40,6 +43,7 @@ def call_cerbos_api(payload):
         logger.error(f"Error communicating with Cerbos: {e}")
         return None
 
+#Check if a user has permission to perform a specific action on a resource.
 def check_permission(userid, action, resource_id):
     roles = get_user_roles(userid)
     payload = build_cerbos_payload(userid, roles, action, resource_id)

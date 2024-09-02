@@ -1,4 +1,3 @@
-# views.py
 import logging
 from rest_framework.decorators import api_view
 from .serializers import TransactionPostSerializer, TransactionGetSerializer
@@ -6,6 +5,7 @@ from .utils import handle_transaction_request
 
 logger = logging.getLogger(__name__)
 
+#create two endpoints for two separate actions
 @api_view(['GET'])
 def get_details(request):
     userid = request.headers.get('userid')
